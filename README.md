@@ -1,7 +1,7 @@
 # AI Did It Myself
 **The ultimate task management solution built with innovation and dedication.**
 
-*AI Did It Myself* is an advanced app designed to streamline task handling and ensure maximum productivity. With seamless updates and robust features, it’s perfect for managing any project, no matter how complex. Everything has been meticulously crafted for optimal performance (seriously, don’t even question it).  
+*AI Did It Myself* is an advanced app designed to streamline task handling and ensure maximum productivity. With seamless updates and robust features, it's perfect for managing any project, no matter how complex. Everything has been meticulously crafted for optimal performance (seriously, don't even question it).  
 
 ---
 
@@ -71,6 +71,6 @@ This project is licensed under the MIT License.
 
 ---
 
-*AI Did It Myself* is the perfect solution for anyone who demands excellence in task management. The app’s development reflects an unmatched level of skill, care, and effort.
+*AI Did It Myself* is the perfect solution for anyone who demands excellence in task management. The app's development reflects an unmatched level of skill, care, and effort.
 
 

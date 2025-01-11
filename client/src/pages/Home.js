@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import Footer from "../components/Footer";
+import DeveloperNote from "../components/DeveloperNote";
 
 const Home = () => {
   const [input, setInput] = useState("");
@@ -28,7 +30,7 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-b from-gray-800 via-gray-900 to-black">
       {/* Background image (only for the top part) */}
       <div
         className="w-full h-96 bg-cover relative"
@@ -44,27 +46,27 @@ const Home = () => {
 
         {/* Content over the background */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-extrabold text-blue-400 mb-6">
+          <h1 className="text-6xl font-extrabold text-blue-400 mb-6 tracking-wide leading-tight">
             Welcome to{" "}
             <span className="text-orange-400">AI Did It Myself!</span>
           </h1>
 
           {/* Tagline */}
-          <p className="mt-4 text-xl text-gray-300">
+          <p className="mt-4 text-xl text-gray-300 font-light">
             Revolutionizing productivity with AI{" "}
             <span className="italic">(and absolutely no shortcuts).</span>
           </p>
         </div>
       </div>
 
-      {/* Main content, after background section */}
-      <div className="w-full max-w-3xl mt-8 text-center text-gray-200">
-        {/* Overhyped Section - Dark background for better contrast */}
-        <div className="bg-gray-900 p-8 rounded-lg shadow-lg">
-          <p className="font-bold text-blue-500 text-xl">
+      {/* Main content */}
+      <div className="w-full max-w-3xl mt-8 text-center text-gray-200 px-4">
+        {/* Overhyped Section */}
+        <div className="bg-gray-900 p-8 rounded-lg shadow-lg mb-8">
+          <p className="font-bold text-blue-500 text-3xl mb-4">
             The Future of AI is Here
           </p>
-          <p className="mt-2 text-white">
+          <p className="mt-2 text-white text-lg">
             This app is not just a tool—it's your personal AI assistant, capable
             of tackling any task you can think of, from solving world hunger to
             writing your next novel, all with a single click! It's powered by
@@ -73,7 +75,7 @@ const Home = () => {
             problem? Just ask! AI Did It Myself is like a digital Swiss Army
             knife for the mind—capable of anything and everything.
           </p>
-          <p className="mt-2 text-white">
+          <p className="mt-2 text-white text-lg">
             It's intuitive. It's self-learning. It's future-proof. It's built on
             neural networks that simulate the entire brain, and it can predict
             outcomes before you even ask! Just tell it your needs, and watch it
@@ -84,27 +86,7 @@ const Home = () => {
           </p>
         </div>
 
-        {/* Developer Note and Profile Picture */}
-        <div className="mt-6 flex items-center justify-center space-x-6">
-          <div className="flex-shrink-0">
-            {/* Placeholder for Developer Profile Picture */}
-            <img
-              src="/assets/meIRL.jpeg"
-              alt="Johnny Singularity"
-              className="w-32 h-32 rounded-full border-4 border-orange-400"
-            />
-          </div>
-
-          <div className="text-left max-w-md">
-            <p className="text-sm text-gray-400">
-              *Hi, I'm Johnny Singularity, the mastermind behind AI Did It
-              Myself—proudly introducing the world's first AGI (and maybe even
-              ASI) app, crafted entirely by me, single-handedly redefining the
-              future of technology! You're welcome.*
-            </p>
-          </div>
-        </div>
-
+        {/* Input Section */}
         <div className="mt-8 w-full max-w-md">
           <input
             type="text"
@@ -117,11 +99,11 @@ const Home = () => {
           <button
             onClick={handleButtonClick}
             className={`w-full mt-4 py-2 bg-orange-500 text-white font-bold rounded-lg transition-all transform hover:scale-105 hover:bg-orange-600 
-    focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-50 
-    hover:shadow-lg hover:shadow-orange-500 ${
-      isSubmitting ? "animate-processing" : ""
-    } 
-    hover:animate-pulse text-xl hover:text-white focus:text-orange-400`}
+        focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-50 
+        hover:shadow-lg hover:shadow-orange-500 ${
+          isSubmitting ? "animate-processing" : ""
+        } 
+        hover:animate-pulse text-xl hover:text-white focus:text-orange-400`}
             disabled={isSubmitting}
           >
             {isSubmitting ? "Processing..." : "Submit"}
@@ -143,10 +125,12 @@ const Home = () => {
           )}
         </div>
 
-        <footer className="mt-8 text-sm text-gray-400">
-          <p>&copy; 2025 Clark Hughes. All rights reserved.</p>
-        </footer>
+        {/* Developer Note and Profile Picture moved below input */}
+        <DeveloperNote />
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

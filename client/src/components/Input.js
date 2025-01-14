@@ -1,13 +1,24 @@
 import { useState } from "react";
 import axios from "axios";
+import YourLifeAndRightsModal from "./YourLifeAndRightsModal";
 
 const Input = () => {
   const [input, setInput] = useState("");
   const [response, setResponse] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(true);
+  const [showMessage, setShowMessage] = useState(false);
 
   const handleInputChange = (e) => {
     setInput(e.target.value);
+  };
+
+  const handleModalClose = () => {
+    setShowMessage(true); // Show the message
+    setTimeout(() => {
+      setShowMessage(false); // Hide the message after a short time
+      setShowModal(false); // Close the modal
+    }, 500); // 500ms delay (adjust for the desired effect)
   };
 
   const handleButtonClick = async () => {
@@ -63,6 +74,19 @@ const Input = () => {
           </p>
           <p>{response}</p>
         </div>
+      )}
+
+      {/* Modal */}
+      <div>
+        {/* Show the modal if showModal is true */}
+        {showModal && <YourLifeAndRightsModal onClose={handleModalClose} />}
+      </div>
+
+      {/* Show the message briefly */}
+      {showMessage && (
+        <h1 className="absolute text-3xl font-bold text-orange-500">
+          Welcome to the Singularity
+        </h1>
       )}
     </div>
   );

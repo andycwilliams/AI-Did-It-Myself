@@ -1,4 +1,4 @@
-const HypeSection = () => {
+const Hype = () => {
   return (
     <div className="bg-gray-900 p-8 rounded-lg shadow-lg mb-8">
       <p className="font-bold text-blue-500 text-3xl mb-4">
@@ -26,4 +26,4 @@ const HypeSection = () => {
   );
 };
 
-export default HypeSection;
+export default Hype;

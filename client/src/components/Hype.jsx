@@ -14,14 +14,16 @@ const Hype = () => {
         anything and everything.
       </p>
       <p className="mt-2 text-white text-lg">
-        It's intuitive. It's self-learning. It's future-proof. It's built on
-        neural networks that simulate the entire brain, and it can predict
-        outcomes before you even ask! Just tell it your needs, and watch it
-        deliver personalized results—faster than you can blink.
+        It's intuitive. It's self-learning. It's future-proof because it IS the
+        future. It's built on neural networks that not only simulate but
+        replicate and accelerate the entire brain, and it can predict outcomes
+        before you even ask! Just tell it your needs, and watch it deliver
+        personalized results—faster than you can think about blinking.
       </p>
-      <p className="mt-2 italic text-orange-400">
-        *It even does your laundry (maybe)*
+      <p className="mt-2  text-orange-400 text-2xl ">
+        It even does your laundry*
       </p>
+      <small>*Forthcoming</small>
     </div>
   );
 };

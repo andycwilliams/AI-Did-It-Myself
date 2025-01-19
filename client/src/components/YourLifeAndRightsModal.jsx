@@ -16,13 +16,11 @@ const YourLifeAndRightsModal = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-white max-w-lg text-center">
-        <h2 className="text-2xl font-bold mb-4">
-          Waiver of Incomprehensible Magnitude
-        </h2>
+      <div className="bg-gray-800 p-10 rounded-lg shadow-lg text-white max-w-lg text-center">
+        <h2 className="text-2xl font-bold mb-4">Fair and Binding Waiver</h2>
         <p className="text-sm mb-4">
-          By clicking "Agree," you hereby grant Johnny Singularity the following
-          irrevocable and perpetual rights:
+          By clicking "Agree," you hereby grant Johnny Singularity and JohnnyAI
+          the following rights:
           <ul className="list-disc list-inside text-left mt-4">
             <li>Your likeness, voice, and any identifiable features.</li>
             <li>Your thoughts, feelings, intentions, hopes, and dreams.</li>
@@ -30,7 +28,10 @@ const YourLifeAndRightsModal = ({ onClose }) => {
               Any past, present, or future creative works or intellectual
               property.
             </li>
-            <li>Your memories, ambitions, and aspirations in perpetuity.</li>
+            <li>
+              Your memories, ambitions, thoughts, deeds, and aspirations in
+              perpetuity.
+            </li>
             <li>
               Your entire identity, including but not limited to your name,
               actions, decisions, and personality.
@@ -44,7 +45,10 @@ const YourLifeAndRightsModal = ({ onClose }) => {
           realms of existence. By continuing, you agree to these terms without
           exception.
         </p>
-        <div className="flex flex-col items-center">
+        <div
+          // className="flex flex-col items-center"
+          className="grid grid-rows-2 grid-flow-col gap-4"
+        >
           <button
             onClick={handleAgree}
             className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md mb-2"
@@ -53,17 +57,16 @@ const YourLifeAndRightsModal = ({ onClose }) => {
           </button>
           <button
             onClick={handleDisagree}
-            className="bg-gray-500 px-4 py-2 rounded-md"
+            className="bg-gray-500 hover:bg-gray-600 px-4 py-2 rounded-md mb-2"
           >
             Disagree
           </button>
-          {error && (
-            <p className="text-red-500 mt-2 text-sm">
-              Error: Option not available due to technical limitations. Please
-              try again later.
-            </p>
-          )}
         </div>
+        {error && (
+          <p className="text-red-500 mt-2 text-sm">
+            Error: Action not allowed. Click 'Agree'.
+          </p>
+        )}
       </div>
     </div>
   );

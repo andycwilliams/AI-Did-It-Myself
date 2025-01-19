@@ -17,11 +17,11 @@ const Header = () => {
         <h1 className="text-6xl font-extrabold text-blue-400 mb-6 tracking-wide leading-tight">
           Welcome to <span className="text-orange-400">AI Did It Myself!</span>
         </h1>
+        <p>The AI that I did myself</p>
 
         {/* Tagline */}
         <p className="mt-4 text-xl text-gray-300 font-light">
-          Revolutionizing productivity with AI{" "}
-          <span className="italic">(and absolutely no shortcuts).</span>
+          Revolutionizing productivity and you with AI
         </p>
       </div>
     </div>

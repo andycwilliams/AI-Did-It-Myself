@@ -3,6 +3,7 @@ import Hype from "../components/Hype";
 import Input from "../components/Input";
 import DeveloperNote from "../components/DeveloperNote";
 import Footer from "../components/Footer";
+// import YourLifeAndRightsModal from "./components/YourLifeAndRightsModal";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
         {/* Input Section */}
         <Input />
 
-        {/* Developer Note and Profile Picture moved below input */}
+        {/* Developer Note and Profile Picture */}
         <DeveloperNote />
       </div>
 

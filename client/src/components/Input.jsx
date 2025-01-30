@@ -18,7 +18,7 @@ const Input = () => {
     setTimeout(() => {
       setShowMessage(false); // Hide the message after a short time
       setShowModal(false); // Close the modal
-    }, 500); // 500ms delay (adjust for the desired effect)
+    }, 3000); // 500ms delay (adjust for the desired effect)
   };
 
   const handleButtonClick = async () => {
@@ -31,7 +31,9 @@ const Input = () => {
       });
       setResponse(result.data.response);
     } catch (error) {
-      setResponse("Error processing the input.");
+      setResponse(
+        "Error processing the input. It must not have been brilliant enough."
+      );
     } finally {
       setIsSubmitting(false);
       setInput(""); // Clear input after submission
@@ -84,9 +86,19 @@ const Input = () => {
 
       {/* Show the message briefly */}
       {showMessage && (
-        <h1 className="absolute text-3xl font-bold text-orange-500">
-          Welcome to the Singularity
-        </h1>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-100 z-50">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-green-600 tracking-widest glitch-text">
+            {["WELCOME", "TO", "THE", "SINGULARITY"].map((word, i) => (
+              <span key={i} className="inline-block mr-4">
+                {word.split("").map((char, j) => (
+                  <span key={j} className="glitch-letter">
+                    {char}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </h1>
+        </div>
       )}
     </div>
   );

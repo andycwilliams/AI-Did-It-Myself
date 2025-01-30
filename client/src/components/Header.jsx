@@ -21,7 +21,7 @@ const Header = () => {
 
         {/* Tagline */}
         <p className="mt-4 text-xl text-gray-300 font-light">
-          Revolutionizing productivity and you with AI
+          Revolutionizing productivity and you with (my) AI
         </p>
       </div>
     </div>

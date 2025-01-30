@@ -41,9 +41,11 @@ const YourLifeAndRightsModal = ({ onClose }) => {
               dimensions.
             </li>
           </ul>
-          This agreement is binding in all timelines, parallel universes, and
-          realms of existence. By continuing, you agree to these terms without
-          exception.
+          <p className="m-3 font-light">
+            NOTE: This agreement is binding in all timelines, parallel
+            universes, and realms of existence. By continuing, you agree to
+            these terms without exception.
+          </p>
         </p>
         <div
           // className="flex flex-col items-center"

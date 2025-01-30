@@ -1,6 +1,7 @@
 const Footer = () => {
   return (
     <footer className="w-full mt-8 bg-gray-900 py-4 text-sm text-gray-400 flex flex-col items-center space-y-2 border-t border-gray-700">
+      <p className="italic text-xs">**Once I invent robots***</p>
       <p className="hover:text-blue-400 transition-colors duration-300">
         &copy; {new Date().getFullYear()} Johnny Singularity™®. All rights
         reserved and then some.
@@ -47,6 +48,7 @@ const Footer = () => {
         prior technologies are used with gratitude and acknowledge of their
         obsolescence.*
       </p>
+      <p className="text-gray-500 italic text-xs">***And laundry</p>
     </footer>
   );
 };
